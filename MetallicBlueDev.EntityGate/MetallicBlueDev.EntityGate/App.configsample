@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+
+  <configSections>
+    <section name="EntityGateConfigs" type="MetallicBlueDev.EntityGate.Configuration.EntityGateSectionHandler, MetallicBlueDev.EntityGate" />
+  </configSections>
+
+  <connectionStrings>
+    <add name="SampleDbInstance" connectionString="DATABASE=MyDbName;SERVER=my-db-host;Integrated Security=False;USER ID=MyUserName;PASSWORD=MyPassword;" providerName="System.Data.SqlClient" />
+  </connectionStrings>
+
+  <EntityGateConfigs>
+    <EntityGateConfig>
+      <ConnectionName>SampleDbInstance</ConnectionName>
+      <MaximumNumberOfAttempts>5</MaximumNumberOfAttempts>
+      <AttemptDelay>1000</AttemptDelay>
+      <Timeout>30</Timeout>
+    </EntityGateConfig>
+  </EntityGateConfigs>
+  
+</configuration>
